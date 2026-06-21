@@ -1,0 +1,71 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.25), transparent 70%);
+  top: 15%;
+  left: 10%;
+  pointer-events: none;
+}
+
+.page::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.2), transparent 70%);
+  bottom: 10%;
+  right: 12%;
+  pointer-events: none;
+}
+
+.card {
+  width: min(420px, 100%);
+  position: relative;
+  z-index: 1;
+}
+
+.card h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.35rem;
+  background: linear-gradient(135deg, #f1f5f9, #a5b4fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.submit {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.hint {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(129, 140, 248, 0.2);
+}
+
+.hint strong {
+  color: var(--accent);
+}
